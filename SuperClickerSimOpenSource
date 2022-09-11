@@ -68,18 +68,7 @@ Tab:AddSlider({
 		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
 	end    
 })
-Tab:AddSlider({
-	Name = "Jumppower",
-	Min = 50,
-	Max = 200,
-	Default = 5,
-	Color = Color3.fromRGB(255,255,255),
-	Increment = 1,
-	ValueName = "Jumppower",
-	Callback = function(Value)
-		game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
-	end    
-})
+
 ------------------------------------------------------------------------
 
 -------------Buttons--------------------------------
