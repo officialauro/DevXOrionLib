@@ -65,13 +65,13 @@ Tab:AddSlider({
 })
 
 Tab:AddSlider({
-	Name = "WalkSpeed",
+	Name = "JumpPower",
 	Min = 50,
 	Max = 500,
 	Default = 5,
 	Color = Color3.fromRGB(255,255,255),
 	Increment = 1,
-	ValueName = "Walkspeed",
+	ValueName = "JumpPower",
 	Callback = function(Value)
 		game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
 	end    
