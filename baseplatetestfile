@@ -98,10 +98,5 @@ Tab:AddButton({
 -----------------------------------------------
 
 OrionLib:Init()
-Settings:AddButton({
-	Name = "Destroy GUI",
-	Callback = function(value)
-		OrionLib:Destroy(value)
-  	end    
-})
+OrionLib:Destroy()
 print"weluvu"
