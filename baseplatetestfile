@@ -98,5 +98,5 @@ Tab:AddButton({
 -----------------------------------------------
 
 OrionLib:Init()
-OrionLib:Destroy()
+OrionLib:Destroy(OrionLib)
 print"weluvu"
