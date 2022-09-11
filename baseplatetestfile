@@ -96,7 +96,7 @@ Tab:AddButton({
 Settings:AddButton({
 	Name = "Destroy GUI",
 	Callback = function()
-		OrionLib:Destroy()
+		OrionLib:Destroy(Window)
   	end    
 })
 
