@@ -1,0 +1,106 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "DevX", HidePremium = true, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+
+--------Game Detection-----------
+if game.PlaceId == 4483381587 then
+OrionLib:MakeNotification({
+	Name = "Game Detected!",
+	Content = "Baseplate | GameID = 4483381587",
+	Image = "rbxassetid://6023426909",
+	Time = 5
+})
+else
+if game.PlaceId == 8579989858 then
+OrionLib:MakeNotification({
+	Name = "Game Detected!",
+	Content = "Super Clicker Simulator | GameID = 8579989858",
+	Image = "rbxassetid://6023426909",
+	Time = 5
+})
+else
+	OrionLib:MakeNotification({
+	Name = "Error!",
+	Content = "Game not detected! Maybe Unsupported?",
+	Image = "rbxassetid://6031071057",
+	Time = 5
+})
+end
+end
+
+------------Tabs------------------------------
+local Tab = Window:MakeTab({
+	Name = "Character",
+	Icon = "rbxassetid://6034287594",
+	PremiumOnly = false
+})
+local Settings = Window:MakeTab({
+	Name = "Settings",
+	Icon = "rbxassetid://6031280882",
+	PremiumOnly = false
+})
+------------------------------------------------------
+
+
+------------Sections------------------
+local Section = Tab:AddSection({
+	Name = "LocalPlayer"
+})
+
+
+--------------------------------------
+
+--------------Sliders-----------------
+Tab:AddSlider({
+	Name = "WalkSpeed",
+	Min = 16,
+	Max = 100,
+	Default = 5,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "Walkspeed",
+	Callback = function(Value)
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+	end    
+})
+
+Tab:AddSlider({
+	Name = "WalkSpeed",
+	Min = 50,
+	Max = 500,
+	Default = 5,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "Walkspeed",
+	Callback = function(Value)
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+	end    
+})
+
+------------------------------------------------------------------------
+
+-------------Buttons--------------------------------
+Tab:AddButton({
+	Name = "Suicide",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.Humanoid.Health = 0
+			  OrionLib:MakeNotification({
+			  Name = "oh no!",
+			  Content = "you killed yourself",
+			  Image = "rbxassetid://4483345998",
+			  Time = 3
+})
+  	end    
+})
+
+Settings:AddButton({
+	Name = "Destroy GUI",
+	Callback = function()
+		
+  	end    
+})
+
+
+-----------------------------------------------
+
+OrionLib:Init()
