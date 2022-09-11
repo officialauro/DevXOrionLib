@@ -1,9 +1,8 @@
 if game.PlaceId == 8579989858 then
- 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/officialauro/DevXOrionLib/main/SuperClickerSimOpenSource", true))()
 else
 if game.PlaceId == 4483381587 then
-
-
+loadstring(game:HttpGet("https://raw.githubusercontent.com/officialauro/DevXOrionLib/main/SuperClickerSimOpenSource", true))()
 else
 print"game not supported"
 end
