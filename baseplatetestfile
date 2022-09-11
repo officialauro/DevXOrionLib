@@ -93,16 +93,15 @@ Tab:AddButton({
   	end    
 })
 
+
+
+-----------------------------------------------
+
+OrionLib:Init()
 Settings:AddButton({
 	Name = "Destroy GUI",
 	Callback = function(value)
 		OrionLib:Destroy(value)
   	end    
 })
-
-
------------------------------------------------
-
-OrionLib:Init()
-
 print"weluvu"
