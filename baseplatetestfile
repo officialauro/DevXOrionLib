@@ -54,7 +54,7 @@ local Section = Tab:AddSection({
 Tab:AddSlider({
 	Name = "WalkSpeed",
 	Min = 16,
-	Max = 100,
+	Max = 500,
 	Default = 5,
 	Color = Color3.fromRGB(255,255,255),
 	Increment = 1,
