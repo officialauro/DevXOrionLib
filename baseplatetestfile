@@ -51,7 +51,9 @@ local Settings = Window:MakeTab({
 local Section = Tab:AddSection({
 	Name = "LocalPlayer"
 })
-
+local Section2 = Tab:AddSection({
+	Name = "ESP/Chams"
+})
 
 --------------------------------------
 
@@ -97,16 +99,29 @@ Tab:AddButton({
 })
   	end    
 })
+Tab:AddButton({
+	Name = "ESP W/Lines",
+	Callback = function()
 
+	end 	
+})
+Tab:AddButton({
+	Name = "Chams",
+	Callback = function()
+
+	end 	
+})
 GameTab:AddButton({
 	Name = "Aimbot",
 	Callback = function()
-      	
+
+  	end    	
 })
 GameTab:AddButton({
 	Name = "Silent Aim",
 	Callback = function()
-      	
+
+	end 	
 })
 
 
