@@ -100,7 +100,7 @@ Tab:AddButton({
   	end    
 })
 Tab:AddButton({
-	Name = "ESP W/Lines",
+	Name = "ESP",
 	Callback = function()
 
 	end 	
