@@ -34,6 +34,11 @@ local Tab = Window:MakeTab({
 	Icon = "rbxassetid://6034287594",
 	PremiumOnly = false
 })
+local GameTab = Window:MakeTab({
+	Name = "Game",
+	Icon = "rbxassetid://6034287594",
+	PremiumOnly = false
+})
 local Settings = Window:MakeTab({
 	Name = "Settings",
 	Icon = "rbxassetid://6031280882",
@@ -93,6 +98,16 @@ Tab:AddButton({
   	end    
 })
 
+GameTab:AddButton({
+	Name = "Aimbot",
+	Callback = function()
+      	
+})
+GameTab:AddButton({
+	Name = "Silent Aim",
+	Callback = function()
+      	
+})
 
 
 -----------------------------------------------
