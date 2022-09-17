@@ -1,0 +1,101 @@
+--https://www.roblox.com/games/7560156054/X2-Clicker-Simulator
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "DevX", HidePremium = true, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+
+
+
+--------Game Detection-----------
+if game.PlaceId == 4483381587 then
+OrionLib:MakeNotification({
+	Name = "Game Detected!",
+	Content = "Baseplate | GameID = 4483381587",
+	Image = "rbxassetid://6023426909",
+	Time = 5
+})
+else
+
+if game.PlaceId == 10224689615 then
+OrionLib:MakeNotification({
+	Name = "Game Detected!",
+	Content = "Money Clicker Simulator | GameID = 10224689615",
+	Image = "rbxassetid://6023426909",
+	Time = 5
+})
+else
+	OrionLib:MakeNotification({
+	Name = "Error!",
+	Content = "Game not detected! Maybe Unsupported?",
+	Image = "rbxassetid://6031071057",
+	Time = 5
+})
+end
+end
+
+------------Tabs------------------------------
+local Tab = Window:MakeTab({
+	Name = "Character",
+	Icon = "rbxassetid://6034287594",
+	PremiumOnly = false
+})
+local GameStat = Window:MakeTab({
+	Name = "Game Stats",
+	Icon = "rbxassetid://6031280882",
+	PremiumOnly = false
+})
+
+local Settings = Window:MakeTab({
+	Name = "Settings",
+	Icon = "rbxassetid://6031280882",
+	PremiumOnly = false
+})
+
+------------------------------------------------------
+
+
+------------Sections------------------
+local Section = Tab:AddSection({
+	Name = "LocalPlayer"
+})
+local GameStats = GameStat:AddSection({
+	Name = "Game Stats"
+})
+
+
+
+--------------------------------------
+
+--------------Sliders-----------------
+
+------------------------------------------------------------------------
+
+-------------Buttons--------------------------------
+Tab:AddButton({
+	Name = "Suicide",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.Humanoid.Health = 0
+			  OrionLib:MakeNotification({
+			  Name = "oh no!",
+			  Content = "you killed yourself",
+			  Image = "rbxassetid://4483345998",
+			  Time = 3
+})
+  	end    
+})
+GameStat:AddButton({
+	Name = "INF Stats",
+	Callback = function()
+      		game:GetService("Players").LocalPlayer.leaderstats.Money.Value = math.huge
+			game:GetService("Players").LocalPlayer.leaderstats.Gems.Value = math.huge
+			game:GetService("Players").LocalPlayer.leaderstats.Rebirth.Value = math.huge
+  	end    
+})
+
+
+
+
+
+
+-----------------------------------------------
+
+OrionLib:Init()
