@@ -2,7 +2,7 @@ if game.PlaceId == 8579989858 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/officialauro/DevXOrionLib/main/SuperClickerSimOpenSource", true))()
 else
 if game.PlaceId == 4483381587 then
-loadstring(game:HttpGet("https://raw.githubusercontent.com/officialauro/DevXOrionLib/main/SuperClickerSimOpenSource", true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/officialauro/DevXOrionLib/main/baseplatetestfile", true))()
 else
 if game.PlaceId == 10224689615  then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/officialauro/DevXOrionLib/main/SuperClickerSimOpenSource", true))()
